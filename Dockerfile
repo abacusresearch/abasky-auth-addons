@@ -15,3 +15,5 @@ RUN java -jar /usr/share/java/saxon.jar \
     mkdir -p /opt/jboss/keycloak/standalone/data && \
     chown jboss:jboss /opt/jboss/keycloak/standalone/log && \
     chown jboss:jboss /opt/jboss/keycloak/standalone/data
+
+USER jboss
