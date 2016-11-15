@@ -8,9 +8,7 @@
     <xsl:output method="xml" indent="yes"/>
 
     <xsl:template match="//undertow:subsystem/undertow:server/undertow:http-listener">
-        <xsl:copy>
-            <undertow:http-listener name="default" socket-binding="http" redirect-socket="proxy-https" proxy-address-forwarding="true"/>
-        </xsl:copy>
+        <undertow:http-listener name="default" socket-binding="http" redirect-socket="proxy-https" proxy-address-forwarding="true"/>
     </xsl:template>
 
     <xsl:template match="//domain:socket-binding-group[@name='standard-sockets']">
@@ -27,4 +25,3 @@
     </xsl:template>
 
 </xsl:stylesheet>
-
