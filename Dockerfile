@@ -12,4 +12,4 @@ RUN java -jar /usr/share/java/saxon.jar \
       -o:/opt/jboss/keycloak/standalone/configuration/standalone-ha.xml && \
     rm /opt/jboss/keycloak/changeProxy.xsl
 
-VOLUME /opt/jboss/keycloak/standalone/data /opt/jboss/keycloak/standalone/log
+USER jboss
