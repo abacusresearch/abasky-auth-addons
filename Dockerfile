@@ -2,6 +2,9 @@ FROM jboss/keycloak-mysql
 
 COPY changeProxy.xsl /opt/jboss/keycloak/
 
+# import themes
+COPY themes /opt/jboss/keycloak/themes/
+
 # required for chown operations
 USER root
 RUN java -jar /usr/share/java/saxon.jar \
