@@ -2,7 +2,25 @@
 
 Extends the keycloak-mysql docker image to use OpenShift
 
-## Usage
+## docker-compose Usage
+
+### Build Docker Image
+
+   docker-compose build
+
+### Start Mysql
+
+   docker-compose up -d mysql
+
+### Start Keycloak
+
+   docker-compose up
+
+## Log into keycloak
+
+   http://localhost:8080 (user: root, password: password)
+
+## Docker Usage
 
 ### Start a MySQL instance
 
