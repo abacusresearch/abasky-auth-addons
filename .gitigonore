@@ -1,0 +1,8 @@
+*
+!.gitignore
+!Dockerfile
+!README.md
+!changeLogger.xsl
+!changeProxy.xsl
+!docker-compose.yml
+!themes/
