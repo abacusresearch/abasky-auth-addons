@@ -1,4 +1,8 @@
-*
+# Blacklist other keycloak directories
+/*
+**/.DS_Store
+
+# Whitelist themes and useful files 
 !.gitignore
 !Dockerfile
 !README.md
