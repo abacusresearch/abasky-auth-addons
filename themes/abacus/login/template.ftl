@@ -1,4 +1,4 @@
-<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true>
+<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true onlyPanel=false>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" class="${properties.kcHtmlClass!}">
 
@@ -40,15 +40,17 @@
         <#else>
         <div id="kc-container-wrapper" class="form-panel-container login-container">
         </#if>
-            
+        
+        <#if !onlyPanel>    
             <div class="row">
                 <div id="kc-logo" class="col-md-4"><img src="${url.resourcesPath}/img/logo.svg"></div>
                 <h3 id="kc-one-account" class="text-primary-2 m-b-lg col-md-8">${msg("oneAccount")}</h3>
             </div>
+        </#if>
             <div id="kc-content" class="hpanel form-panel">
                 <div id="kc-content-wrapper" class="panel-body">
 
-                    <#if displayMessage && message?has_content>
+                    <#if displayMessage && message?has_content && !onlyPanel>
                         <div class="alert alert-${message.type} col-md-12">
                             <#if message.type = 'success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
                             <#if message.type = 'warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
@@ -63,7 +65,7 @@
                     <#else>
                     <div id="kc-form" class="col-md-12">
                     </#if>
-                        <div id="kc-form-wrapper"> 
+                        <div id="kc-form-wrapper" <#if onlyPanel>class="text-center"</#if>> 
                             <#nested "form">
                         </div>
                     </div>
@@ -77,28 +79,29 @@
                     </#if>
                 </div>
             </div>
-
+            <#if !onlyPanel> 
             <div id="kc-footer" class="row">
-            <#if realm.internationalizationEnabled>
                 <div class="col-md-6 col-sm-6 col-xs-6">
                 &copy; <a href="http://www.abacus.ch/" target="_blank">ABACUS Research AG</a>
                 </div>
-                <div class="col-md-6 col-sm-6 col-xs-6 text-right">
-                <div id="kc-locale" class="pull-right">
-                    <div id="kc-locale-wrapper" class="${properties.kcLocaleWrapperClass!}">
-                        <div class="kc-dropdown" id="kc-locale-dropdown">
-                            <a href="#" id="kc-current-locale-link">${locale.current}</a>
-                            <ul>
-                                <#list locale.supported as l>
-                                    <li class="kc-dropdown-item"><a href="${l.url}">${l.label}</a></li>
-                                </#list>
-                            </ul>
+                <#if realm.internationalizationEnabled>
+                    <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                        <div id="kc-locale" class="pull-right">
+                            <div id="kc-locale-wrapper" class="${properties.kcLocaleWrapperClass!}">
+                                <div class="kc-dropdown" id="kc-locale-dropdown">
+                                    <a href="#" id="kc-current-locale-link">${locale.current}</a>
+                                    <ul>
+                                        <#list locale.supported as l>
+                                            <li class="kc-dropdown-item"><a href="${l.url}">${l.label}</a></li>
+                                        </#list>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                </div>
-            </#if>
+                    </#if>
             </div>
+            </#if>
         </div>
     </div>
 </body>

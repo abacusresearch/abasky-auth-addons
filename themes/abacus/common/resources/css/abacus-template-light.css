@@ -5,6 +5,10 @@
     margin-bottom: 30px;
 }
 
+.hpanel .panel-body {
+    border-color: #efefef;
+}
+
 .hpanel .alert.alert-error {
     border: 0;
     background: #f9eaef;
