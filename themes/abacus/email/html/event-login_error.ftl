@@ -1,8 +1,8 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout; section>
 <#if section = "title">
-  ${msg("executeActionsSubject")}
+  ${msg("eventLoginErrorSubject")}
 <#elseif section = "content">
-  ${msg("executeActionsBodyHtml",link, linkExpiration, realmName)}
+  ${msg("eventLoginErrorBodyHtml",event.date,event.ipAddress)}
 </#if>
 </@layout.registrationLayout>
