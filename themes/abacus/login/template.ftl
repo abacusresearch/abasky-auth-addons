@@ -43,7 +43,7 @@
         
         <#if !onlyPanel>    
             <div class="row">
-                <div id="kc-logo" class="col-md-4"><img src="${url.resourcesPath}/img/logo.svg"></div>
+                <div id="kc-logo" class="col-md-4"><img src="${url.resourcesPath}/img/logo.png"></div>
                 <h3 id="kc-one-account" class="text-primary-2 m-b-lg col-md-8">${msg("oneAccount")}</h3>
             </div>
         </#if>
