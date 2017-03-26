@@ -14,6 +14,11 @@
     background: #f9eaef;
 }
 
+.hpanel .alert.alert-warning {
+    border: 1px solid #faebcc;
+    background-color: #faebcc;
+}
+
 #kc-logo img {
     max-width: 136px;
     height: auto;

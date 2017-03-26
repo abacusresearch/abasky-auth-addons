@@ -5,7 +5,6 @@
     <#elseif section = "header">
         ${msg("updatePasswordTitle")}
     <#elseif section = "form">
-        <a id="kc-back-to-login" class="text-underline" href="${url.loginUrl}">${msg("backToLogin")}</a>
         <h4 class="m-t-md m-b-xl">${msg("updatePasswordTitle")}</h4> 
         <form id="kc-passwd-update-form" class="${properties.kcFormClass!}" action="${url.loginAction}" method="post">
             <input type="text" readonly value="this is not a login form" style="display: none;">
