@@ -22,7 +22,7 @@
             </div>
 
             <div id="kc-form-button-login" class="${properties.kcFormButtonsClass!}">
-                    <input class="btn btn-primary pull-right" type="submit" value="${msg("doSubmit")}"/>
+                    <input class="btn btn-primary pull-right" type="submit" value="${msg("doSubmit")}">
             </div>
         </form>
     </#if>

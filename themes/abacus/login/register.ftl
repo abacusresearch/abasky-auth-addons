@@ -13,12 +13,12 @@
 
           <#if !realm.registrationEmailAsUsername>
                 <div class="floating-label-wrap">
-                    <input type="text" id="username" data-value="${(register.formData.username!'')?html}" class="form-control" name="username" value="${(register.formData.username!'')?html}" required>
+                    <input type="text" id="username" data-value="${(register.formData.username!'')?html}" class="form-control" name="username" value="${(register.formData.username!'')?html}" required autofocus>
                     <label for="username" class="${properties.kcLabelClass!}">${msg("username")}</label>
                 </div>
           </#if>
                 <div class="floating-label-wrap">
-                    <input type="text" id="firstName" data-value="${(register.formData.firstName!'')?html}" class="form-control"  name="firstName" value="${(register.formData.firstName!'')?html}" required>
+                    <input type="text" id="firstName" data-value="${(register.formData.firstName!'')?html}" class="form-control"  name="firstName" value="${(register.formData.firstName!'')?html}" required autofocus>
                     <label for="firstName" class="${properties.kcLabelClass!}">${msg("firstName")}</label>
                 </div>
 
