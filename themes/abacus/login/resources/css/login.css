@@ -28,8 +28,15 @@ body {
 
 .alert-icon {
     font-size: 60px;
-    color: #ffd661;
     margin-top: 25px;
+}
+
+.alert-icon.pe-7s-attention {
+    color: #ffd661;
+}
+
+.alert-icon.pe-7s-check {
+    color: #13ce66;
 }
 
 .alert-title {
