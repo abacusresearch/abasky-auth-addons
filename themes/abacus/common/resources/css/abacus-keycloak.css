@@ -1,0 +1,39 @@
+.hpanel .alert {
+    border-bottom: 1px solid #e4e5e7;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.hpanel .panel-body {
+    border-color: #efefef;
+}
+
+.hpanel .alert.alert-error {
+    border: 0;
+    background: #f9eaef;
+}
+
+.hpanel .alert.alert-warning {
+    border: 1px solid #faebcc;
+    background-color: #faebcc;
+}
+
+#kc-logo img {
+    max-width: 136px;
+    height: auto;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.checkbox input[type="checkbox"]:focus + label::before, .checkbox input[type="radio"]:focus + label::before {
+    outline: thin dotted;
+    outline: 0 auto -webkit-focus-ring-color;
+}
+
+.floating-label-wrap .form-control:focus ~ label,
+.floating-label-wrap .form-control:not([data-value=""]):not(.select2-container):not(select) ~ label {
+    z-index: 20;
+}
