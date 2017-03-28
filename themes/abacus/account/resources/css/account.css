@@ -38,6 +38,23 @@
     color: #5c646e;
 }
 
+.input-btn-absolute {
+    position: relative;
+}
+
+.input-btn-absolute .btn {
+    position: absolute;
+}
+
+@media (min-width: 768px) {
+    .input-btn-absolute .btn {
+        right: 2px;
+        top: 2px;
+        height: calc(100% - 4px);
+        line-height: calc(100% - 0px);
+    }
+}
+
 .normalheader {
     min-width: 0;
 }
@@ -151,9 +168,11 @@ body.page-small.show-sidebar #wrapper {
         margin-bottom: 5px;
         width: 100%;
     }
-    .btn-block-sm {
+    .input-btn-absolute .btn {
+        position: relative;
         margin-top: 10px;
     }
+
 }
 @media (max-width: 480px) {
     .btn-block-sm {
