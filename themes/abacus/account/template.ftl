@@ -1,4 +1,4 @@
-<#macro mainLayout active bodyClass>
+<#macro mainLayout active bodyClass panel=true>
 <!doctype html>
 <html>
 <head>
@@ -58,7 +58,7 @@
                 <#if features.log><li class="<#if active=='log'>active</#if>"><a href="${url.logUrl}">${msg("log")}</a></li></#if>
         </ul>
         <div id="side-menu-bis" class="hidden-sm hidden-md hidden-lg hidden-xl">
-        <a class="" href="${url.logoutUrl}">${msg("doSignOut")}</a>
+        <a href="${url.logoutUrl}">${msg("doSignOut")}</a>
         <div id="kc-locale" class="pull-left">
             <div id="kc-locale-wrapper" class="${properties.kcLocaleWrapperClass!}">
                     <div class="kc-dropdown" id="kc-locale-dropdown">
@@ -84,8 +84,10 @@
 
                 <div class="row">
                     <div class="col-md-12">
+                        <#if panel>
                         <div class="hpanel">
                             <div class="panel-body">
+                        </#if>
                                 <#if message?has_content>
                                     <div class="alert alert-${message.type}">
                                         <#if message.type=='success' ><span class="pficon pficon-ok"></span></#if>
@@ -95,8 +97,10 @@
                                 </#if>
 
                                 <#nested "content">
+                        <#if panel>
                             </div>
                         </div>
+                        </#if>
                     </div>
                 </div>
                 

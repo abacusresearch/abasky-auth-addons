@@ -120,6 +120,14 @@ body.page-small.show-sidebar #wrapper {
     overflow: hidden;
 }
 
+.table-panel {
+    border: 1px solid #ddd;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #fff;
+}
+
 @media (max-width: 767px) {
     #kc-logo {
         box-sizing: border-box;
