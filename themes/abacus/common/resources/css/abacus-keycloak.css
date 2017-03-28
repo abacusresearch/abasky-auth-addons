@@ -33,6 +33,10 @@
     text-decoration: underline;
 }
 
+a.text-underline {
+    color: #5c646e;
+}
+
 .checkbox input[type="checkbox"]:focus + label::before, .checkbox input[type="radio"]:focus + label::before {
     outline: thin dotted;
     outline: 0 auto -webkit-focus-ring-color;

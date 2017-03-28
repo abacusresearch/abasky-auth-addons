@@ -46,6 +46,13 @@ body {
     border-bottom: 1px solid #e4e5e7;
 }
 
+#kc-back-to-login {
+    color: #5c646e;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 #kc-content {
     margin-bottom: 20px;
     font-size: 13px;

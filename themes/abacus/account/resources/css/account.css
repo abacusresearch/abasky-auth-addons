@@ -1,27 +1,26 @@
-#menu,
-.footer {
-    background: transparent;
-}
-
-.footer {
-    text-align: center;
-    font-size: 11px;
-    color: #78838d;
-}
-
-.footer a {
-    color: #78838d;
-}
+/* WRAPPER */
 
 .boxed-wrapper {
     overflow-x: hidden;
 }
 
+#wrapper {
+    right: 0;
+    min-height: calc(100vh - 56px);
+}
+
+body.page-small.show-sidebar #wrapper {
+    right: -182px;
+    margin-left: 0;
+}
+
+/* HEADER */
+
 #header {
     padding-top: 12px;
 }
 
- #header .header-link {
+#header .header-link {
     position: absolute;
     left: 0;
     top: 0;
@@ -30,9 +29,57 @@
     border: 0;
 }
 
+#kc-locale {
+    margin-left: 15px;
+}
+
+.normalheader {
+    min-width: 0;
+}
+
 .show-sidebar  #header .header-link {
     color: #1677cb;
 }
+
+.hpanel .panel-body {
+    padding-top: 35px;
+}
+
+.hpanel .panel-body.panel-body--padding-reset {
+    padding: 0;
+}
+
+.panel-body__title {
+    margin: 0;
+    background: #f9f9fa;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #78838d;
+    height: 35px;
+    line-height: 35px;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    padding-left: 34px;
+}
+
+.panel-body__content {
+    padding: 20px;
+    font-size: 14px;
+}
+
+.panel-body__content a {
+    color: #1677cb;
+    text-decoration: underline;
+}
+
+.img-thumbnail {
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    max-width: 200px;
+}
+
+/* FORMS */
 
 .form-group label {
     color: #5c646e;
@@ -59,28 +106,7 @@
     }
 }
 
-.normalheader {
-    min-width: 0;
-}
-
-.hpanel .panel-body {
-    padding-top: 35px;
-}
-
-#wrapper {
-    right: 0;
-    min-height: calc(100vh - 56px);
-}
-
-body.page-small.show-sidebar #wrapper {
-    right: -182px;
-    margin-left: 0;
-}
-
-
-#kc-locale {
-    margin-left: 15px;
-}
+ /* SIDE MENU (VISIBLE ON MOBILE) */
 
 #side-menu-bis {
     position: absolute;
@@ -141,8 +167,18 @@ body.page-small.show-sidebar #wrapper {
     overflow: hidden;
 }
 
+ /* TABLES */
+
 .table-panel {
     border: 1px solid #ddd;
+}
+
+.table-panel .btn {
+    margin-bottom: 0;
+}
+
+.table-panel  .width-40 {
+    width: 40px;
 }
 
 .table-panel .label {
@@ -155,6 +191,27 @@ body.page-small.show-sidebar #wrapper {
 .table-striped>tbody>tr:nth-of-type(odd) {
     background-color: #fff;
 }
+
+
+/* FOOTER */
+
+#menu,
+.footer {
+    background: transparent;
+}
+
+.footer {
+    text-align: center;
+    font-size: 11px;
+    color: #78838d;
+}
+
+.footer a {
+    color: #78838d;
+}
+
+
+/* SMALL SCREENS */
 
 @media (max-width: 767px) {
     #kc-logo {
