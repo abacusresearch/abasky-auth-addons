@@ -105,7 +105,7 @@
             </div>
 
             <footer class="footer">
-    ©2017 Abacus
+    &copy; <a href="http://www.abacus.ch/" target="_blank">ABACUS Research AG</a>
 </footer>
 </body>
 </html>
