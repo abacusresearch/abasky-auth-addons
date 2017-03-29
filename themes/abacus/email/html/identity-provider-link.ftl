@@ -3,6 +3,8 @@
 <#if section = "title">
   ${msg("identityProviderLinkSubject")}
 <#elseif section = "content">
-  ${msg("identityProviderLinkBodyHtml", identityProviderAlias, realmName, identityProviderContext.username, link, linkExpiration)}
+  ${msg("identityProviderLinkBodyHtml", realmName, identityProviderAlias, identityProviderContext.username)}
+<#elseif section = "contentAfter">
+  ${msg("identityProviderLinkBodyHtmlAfter", linkExpiration, identityProviderAlias, identityProviderContext.username)}
 </#if>
 </@layout.registrationLayout>

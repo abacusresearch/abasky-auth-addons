@@ -3,7 +3,9 @@
 <#if section = "title">
   ${msg("emailVerificationSubject")}
 <#elseif section = "content">
-  ${msg("emailVerificationBodyHtml",link, linkExpiration, realmName)}
+  ${msg("emailVerificationBodyHtml", realmName)}
+<#elseif section = "contentAfter">
+  ${msg("emailVerificationBodyHtmlAfter", linkExpiration)}
 </#if>
 </@layout.registrationLayout>
 

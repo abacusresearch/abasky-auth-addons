@@ -3,6 +3,6 @@
 <#if section = "title">
   ${msg("eventRemoveTotpSubject")}
 <#elseif section = "content">
-  ${msg("eventRemoveTotpBodyHtml",event.date, event.ipAddress)}
+  ${msg("eventRemoveTotpBodyHtml",event.date,event.ipAddress)}
 </#if>
 </@layout.registrationLayout>
