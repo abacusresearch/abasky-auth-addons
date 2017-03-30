@@ -34,7 +34,7 @@
         <h3 class="panel-body__title">2 ${msg("totpStep2Title")}</h3>
         <div class="panel-body__content">
             <p>${msg("totpStep2")}</p>
-            <p><img class="img-thumbnail" src="data:image/png;base64, ${totp.totpSecretQrCode}" alt="Figure: Barcode"></p>
+            <p><img class="img-thumbnail" src="data:image/png;base64,${totp.totpSecretQrCode}" alt="Figure: Barcode"></p>
             <p><span class="code">${totp.totpSecretEncoded}</span></p>
         </div>
 
@@ -49,7 +49,7 @@
                         <label for="totp" class="control-label">${msg("authenticatorCode")}</label>
                     </div>
                     <div class="col-sm-10 col-md-10">
-                        <input type="text" class="form-control" id="totp" name="totp" autocomplete="off" autofocus autocomplete="off">
+                        <input type="text" class="form-control" id="totp" name="totp" autofocus autocomplete="off">
                         <input type="hidden" id="totpSecret" name="totpSecret" value="${totp.totpSecret}" />
                     </div>
                 </div>

@@ -40,7 +40,7 @@ a.text-underline {
 
 /* Language selector */
 
-#kc-locale ul {
+.kc-locale ul {
     display: block;
     opacity: 0;
     visibility: hidden;
@@ -55,12 +55,12 @@ a.text-underline {
     border: 1px solid #e4e5e7;
     transition: 0.4s;
 }
-#kc-locale:hover ul {
+.kc-locale:hover ul {
     opacity: 1;
     visibility: visible;
     margin: 0;
 }
-#kc-locale ul li a {
+.kc-locale ul li a {
     display: block;
     padding: 1px 11px;
     color: #5b646d;
@@ -68,24 +68,24 @@ a.text-underline {
     display:block;
     line-height: 20px;
 }
-#kc-locale ul li a:hover {
+.kc-locale ul li a:hover {
     color: #1677cb;
     background-color: #fff;
     border-color: #fff;
 }
-#kc-locale-dropdown a {
+.kc-locale-dropdown a {
     color: #fff;
 }
-#kc-locale-dropdown a:hover {
+.kc-locale-dropdown a:hover {
     text-decoration: none;
 }
-#kc-locale {
+.kc-locale {
     position: relative;
     text-align: right;
     z-index: 9999;
     font-size: 14px;
 }
-a#kc-current-locale-link {
+a.kc-current-locale-link {
     border: 1px solid #e4e5e7;
     color: #2b2b2b;
     height: 30px;
@@ -98,7 +98,7 @@ a#kc-current-locale-link {
     font-size: 14px;
     position: relative;
 }
-a#kc-current-locale-link:after {
+a.kc-current-locale-link:after {
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
@@ -145,14 +145,14 @@ a#kc-current-locale-link:after {
 }
 
 @media (max-width: 420px) {
-    #kc-locale ul {
+    .kc-locale ul {
         display: none;
         opacity: 1;
         visibility: visible;
         bottom: 29px;
         top: auto;
     }
-    #kc-locale:hover ul {
+    .kc-locale:hover ul {
         display: block;
     }
 }

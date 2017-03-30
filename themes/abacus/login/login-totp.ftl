@@ -13,7 +13,7 @@
                 <label for="totp">${msg("loginTotpOneTime")}</label>
             </div>
             <div id="kc-form-button-login">
-                <input class="btn btn-primary" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
+                <input class="btn btn-primary" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}">
             </div>
         </form>
     </#if>

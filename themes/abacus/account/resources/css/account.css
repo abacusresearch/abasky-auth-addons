@@ -25,7 +25,7 @@ body.page-small.show-sidebar #wrapper {
     background: #fff;
     border: 0;
 }
-#kc-locale {
+.kc-locale {
     margin-left: 15px;
 }
 .normalheader {
@@ -105,8 +105,8 @@ body.page-small.show-sidebar #wrapper {
     background: #f9f9fa;
 }
 #side-menu-bis a,
-#side-menu-bis a#kc-current-locale-link,
-#side-menu-bis #kc-locale ul li a {
+#side-menu-bis a.c-current-locale-link,
+#side-menu-bis .kc-locale ul li a {
     color: #68717c;
     text-transform: uppercase;
     font-weight: 700;
@@ -120,7 +120,7 @@ body.page-small.show-sidebar #wrapper {
     font-size: 13px;
     line-height: normal;
 }
-#side-menu-bis #kc-locale ul li a {
+#side-menu-bis .kc-locale ul li a {
     height: 35px;
     padding: 7px 20px;
 }
@@ -128,14 +128,14 @@ body.page-small.show-sidebar #wrapper {
     background: #fff;
     color: #2b2b2b;
 }
-#side-menu-bis a#kc-current-locale-link:after {
+#side-menu-bis a.kc-current-locale-link:after {
     line-height: 46px;
 }
-#side-menu-bis #kc-locale {
+#side-menu-bis .kc-locale {
     width: 100%;
     margin: 0;
 }
-#side-menu-bis #kc-locale ul {
+#side-menu-bis .kc-locale ul {
     position: relative;
     max-height: 0;
     overflow: hidden;
@@ -144,7 +144,7 @@ body.page-small.show-sidebar #wrapper {
     padding: 0;
     margin: 0;
 }
-#side-menu-bis #kc-locale:hover ul {
+#side-menu-bis .kc-locale:hover ul {
     position: relative;
     max-height: 200px;
     overflow: hidden;

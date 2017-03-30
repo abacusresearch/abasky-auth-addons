@@ -14,15 +14,15 @@
             <form id="kc-form-login" class="m-t-xl" action="${url.loginAction}" method="post">
                 <div class="floating-label-wrap m-b-md">
                         <#if usernameEditDisabled??>
-                            <input id="username" data-value="${(login.username!'')?html}" class="form-control" name="username" value="${(login.username!'')?html}" type="text" disabled />
+                            <input id="username" data-value="${(login.username!'')?html}" class="form-control" name="username" value="${(login.username!'')?html}" type="text" disabled>
                         <#else>
-                            <input id="username" data-value="${(login.username!'')?html}" class="form-control" name="username" value="${(login.username!'')?html}" type="text" autofocus autocomplete="off" />
+                            <input id="username" data-value="${(login.username!'')?html}" class="form-control" name="username" value="${(login.username!'')?html}" type="text" autofocus autocomplete="off">
                         </#if>
                         <label for="username"><#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if></label>
                 </div>
 
                 <div class="floating-label-wrap">
-                        <input id="password" data-value class="form-control" name="password" type="password" autocomplete="off" />
+                        <input id="password" data-value class="form-control" name="password" type="password" autocomplete="off">
                         <label for="password">${msg("password")}</label>
                 </div>
 
@@ -43,7 +43,7 @@
 
                 <div id="kc-form-submit" class="row">
                     <div id="kc-form-button-login" class="col-md-6 col-sm-6 col-xs-6">
-                            <input class="btn btn-primary pull-right" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
+                            <input class="btn btn-primary pull-right" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}">
                      </div>
                     <div id="kc-form-button-password" class="col-md-6 col-sm-6 col-xs-6 text-left">
                         <#if realm.resetPasswordAllowed>
