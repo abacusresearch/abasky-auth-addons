@@ -42,7 +42,7 @@
         <#if !onlyPanel>    
             <div class="row">
                 <div id="kc-logo" class="col-md-4"><img alt="Abacus" src="${url.resourcesPath}/img/logo.png"></div>
-                <h3 id="kc-one-account" class="text-primary-2 m-b-lg col-md-8">${msg("oneAccount")}</h3>
+                <h3 id="kc-one-account" class="text-primary-2 m-b-lg col-md-8">${realm.displayName}</h3>
             </div>
         </#if>
             <div id="kc-content" class="hpanel form-panel">
@@ -80,7 +80,7 @@
             <#if !onlyPanel> 
             <div id="kc-footer" class="row">
                 <div class="col-md-6 col-sm-6 col-xs-6">
-                &copy; <a href="http://www.abacus.ch/" target="_blank">ABACUS Research AG</a>
+                &copy; <a href="https://www.abacus.ch/" target="_blank">Abacus Research AG</a>
                 </div>
                 <#if realm.internationalizationEnabled>
                     <div class="col-md-6 col-sm-6 col-xs-6 text-right">

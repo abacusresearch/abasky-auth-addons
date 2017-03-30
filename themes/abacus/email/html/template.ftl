@@ -16,7 +16,7 @@
               <a href="${link}" style="background-color:#1677cb;color:#fff;text-decoration:none;height:36px;display:inline-block;line-height:36px;padding:0 22px;border-radius:4px;font-size:14px;margin-bottom: 15px;"><#nested "title"></a>
           </#if>
           <div style="font-size: 14px;line-height:1.43; color: #78838d"><#nested "contentAfter"></div>
-          <p style="margin-top: 60px;font-size:11px;color:#78838d;border-top:1px solid #e4e5e7;text-align: center;padding-top: 30px;">&copy; ABACUS Research AG</p>
+          <p style="margin-top: 60px;font-size:11px;color:#78838d;border-top:1px solid #e4e5e7;text-align: center;padding-top: 30px;">&copy; Abacus Research AG</p>
           </div>
   </body>
 </html>
