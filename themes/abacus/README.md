@@ -9,3 +9,15 @@ Abacus-cloud-template is use for the keycloak theme with those following resourc
 
 All is concatenated in /common/resources/css/application.min.css.
 Rest of generic styles are writen in /common/resrouces/css/abacus-keycloak.css
+
+## Welcome theme
+
+Add the welcomeTheme entry in the standalone file to enable the welcome abacus theme (blank page).
+(If the server is running you need to restart the server for the changes to the welcome theme to take effect.)
+
+```xml
+<theme>
+    ...
+    <welcomeTheme>abacus</welcomeTheme>
+</theme>
+```
