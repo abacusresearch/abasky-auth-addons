@@ -55,7 +55,7 @@
             <div class="col-sm-offset-2 col-md-5 m-b-md"><span class="required">*</span> ${msg("requiredFields")}</div>
             <div id="kc-form-buttons" class="col-md-5 submit">
                 <div class="text-right">
-                    <button type="submit" class="btn btn-primary" name="submitAction" value="Save">${msg("doSave")}</button>
+                    <button type="submit" class="btn btn-primary pull-right m-l-sm" name="submitAction" value="Save">${msg("doSave")}</button>
                     <button type="submit" class="btn btn-default" name="submitAction" value="Cancel">${msg("doCancel")}</button>
                 </div>
             </div>
