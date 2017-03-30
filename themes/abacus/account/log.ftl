@@ -4,6 +4,7 @@
     <#if section = "header">
         <h2>${msg("accountLogHtmlTitle")}</h2>
     <#elseif section = "content">
+    <div class="table-responsive">
     <table class="table table-panel table-striped table-bordered">
         <thead>
         <tr>
@@ -28,6 +29,7 @@
         </tbody>
 
     </table>
+    </div>
     </#if>
 
 </@layout.mainLayout>

@@ -25,6 +25,9 @@ body.page-small.show-sidebar #wrapper {
     background: #fff;
     border: 0;
 }
+#header .header-link i {
+    vertical-align: middle;
+}
 .kc-locale {
     margin-left: 15px;
 }
@@ -110,19 +113,20 @@ body.page-small.show-sidebar #wrapper {
     color: #68717c;
     text-transform: uppercase;
     font-weight: 700;
-    padding: 15px 20px;
+    padding: 0 20px;
     border: 0;
     border-top: 1px solid #e4e5e7;
     display: block;
     width: 100%;
     height: 50px;
+    line-height: 52px;
     border-radius: 0;
     font-size: 13px;
-    line-height: normal;
 }
 #side-menu-bis .kc-locale ul li a {
     height: 35px;
-    padding: 7px 20px;
+    line-height: 37px;
+    padding: 0 20px;
 }
 #side-menu-bis a:hover {
     background: #fff;
@@ -144,7 +148,7 @@ body.page-small.show-sidebar #wrapper {
     padding: 0;
     margin: 0;
 }
-#side-menu-bis .kc-locale:hover ul {
+#side-menu-bis .kc-locale.hover ul {
     position: relative;
     max-height: 200px;
     overflow: hidden;
