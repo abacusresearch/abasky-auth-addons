@@ -5,12 +5,11 @@
     <#elseif section = "header">
         ${msg("registerWithTitleHtml",(realm.displayNameHtml!''))}
     <#elseif section = "form">
-                            <a id="kc-back-to-login" class="text-underline" href="${url.loginUrl}">${msg("backToLogin")}</a>
+        <a id="kc-back-to-login" class="text-underline" href="${url.loginUrl}">${msg("backToLogin")}</a>
         <h4 class="m-t-md m-b-xl">${msg("createAccount")}</h4>
         <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
           <input type="text" readonly value="this is not a login form" style="display: none;">
           <input type="password" readonly value="this is not a login form" style="display: none;">
-
           <#if !realm.registrationEmailAsUsername>
                 <div class="floating-label-wrap">
                     <input type="text" id="username" data-value="${(register.formData.username!'')?html}" class="form-control" name="username" value="${(register.formData.username!'')?html}" required autofocus>

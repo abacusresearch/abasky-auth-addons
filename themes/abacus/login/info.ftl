@@ -13,9 +13,9 @@
         <#if skipLink??>
         <#else>
             <#if pageRedirectUri??>
-                <p class="alert-instruction-md><a href="${pageRedirectUri}">${msg("backToApplication")}</a></p>
+                <p class="alert-instruction-md"><a href="${pageRedirectUri}">${msg("backToApplication")}</a></p>
             <#elseif client.baseUrl??>
-                <p class="alert-instruction-md><a href="${client.baseUrl}">${msg("backToApplication")}</a></p>
+                <p class="alert-instruction-md"><a href="${client.baseUrl}">${msg("backToApplication")}</a></p>
             </#if>
         </#if>
     </#if>
