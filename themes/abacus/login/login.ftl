@@ -58,7 +58,7 @@
         <#if realm.password && social.providers??>
             <div id="kc-social-providers">
                     <#list social.providers as p>
-                        <a href="${p.loginUrl}" id="zocial-${p.alias}" class="btn btn-default btn-block text-left ${p.providerId}"> <span class="text-left">${p.displayName}</span></a>
+                        <a href="${p.loginUrl}" id="zocial-${p.alias}" class="btn btn-default btn-block text-left ${p.providerId}"> <span class="text-left">${msg('signWith')} ${p.displayName}</span></a>
                     </#list>
             </div>
         </#if>

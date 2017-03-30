@@ -107,7 +107,7 @@
             </div>
 
             <footer class="footer">
-                &copy; <a href="http://www.abacus.ch/" target="_blank">ABACUS Research AG</a>
+                &copy; <a href="https://www.abacus.ch/" target="_blank">Abacus Research AG</a>
             </footer>
 
         </div>

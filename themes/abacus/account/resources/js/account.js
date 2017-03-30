@@ -13,6 +13,11 @@ $(document).on("click", ".hide-menu", function(event){
     }
 });
 
+$(document).on("click", "#navigation .kc-current-locale-link", function(event) {
+    event.preventDefault();
+    $(this).parents('.kc-locale').first().toggleClass('hover')
+})
+
 $(window).on("resize click", function () {
     setBodySmall();
 });

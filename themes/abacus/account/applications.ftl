@@ -49,13 +49,15 @@
                     <td>
                         <#if application.client.consentRequired>
                             <#list application.realmRolesGranted as role>
-                                <span class="label label-info"><#if role.description??>${advancedMsg(role.description)}<#else>${advancedMsg(role.name)}</#if></span>
+                                <#if role.description??>${advancedMsg(role.description)}<#else>${advancedMsg(role.name)}</#if>
+                                <#if role_has_next>, </#if>
                             </#list>
                             <#list application.resourceRolesGranted?keys as resource>
                                 <#if application.realmRolesGranted?has_content>, </#if>
                                 <#list application.resourceRolesGranted[resource] as clientRole>
-                                    <span class="label label-info"><#if clientRole.roleDescription??>${advancedMsg(clientRole.roleDescription)}<#else>${advancedMsg(clientRole.roleName)}</#if>
-                                    ${msg("inResource")} <strong><#if clientRole.clientName??>${advancedMsg(clientRole.clientName)}<#else>${clientRole.clientId}</#if></strong></span>
+                                    <#if clientRole.roleDescription??>${advancedMsg(clientRole.roleDescription)}<#else>${advancedMsg(clientRole.roleName)}</#if>
+                                    ${msg("inResource")} <strong><#if clientRole.clientName??>${advancedMsg(clientRole.clientName)}<#else>${clientRole.clientId}</#if></strong>
+                                    <#if clientRole_has_next>, </#if>
                                 </#list>
                             </#list>
                         <#else>
@@ -66,7 +68,7 @@
                     <td>
                         <#if application.client.consentRequired>
                             <#list application.claimsGranted as claim>
-                                <span class="label label-info">${advancedMsg(claim)}</span>
+                                ${advancedMsg(claim)}<#if claim_has_next>, </#if>
                             </#list>
                         <#else>
                             <strong class="label label-success">${msg("fullAccess")}</strong>

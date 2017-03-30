@@ -12,13 +12,10 @@ body {
     color: #5c646e;
 }
 .login-container h3 {
-    font-size: 20px;
+    font-size: 24px;
 }
 .login-container.login-container--2column {
     max-width: 750px;
-}
-.login-container.login-container--2column h3 {
-    font-size: 24px;
 }
 .login-container h4 {
     line-height: 23px;
@@ -87,6 +84,9 @@ body {
     background-repeat: no-repeat;
     margin-bottom: 40px;
 }
+#kc-social-providers .btn {
+    font-size: 13px;
+}
 #kc-social-providers #zocial-google {
     background-image: url("../img/icon-google.png");
 }
@@ -154,8 +154,8 @@ select:-webkit-autofill {
     }
     #kc-info-wrapper {
         width: 100%;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 15px;
+        padding-right: 20px;
     }
     #kc-form.col-md-8 #kc-form-wrapper {
         max-width: calc(100% - 55px);
