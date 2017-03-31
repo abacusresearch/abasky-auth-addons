@@ -32,6 +32,7 @@
             </div>
             <div class="col-sm-6 col-xs-6 text-right hidden-xs">
                 <a class="btn btn-sm btn-default" href="${url.logoutUrl}">${msg("doSignOut")}</a>
+                <#if realm.internationalizationEnabled>
                 <div class="kc-locale pull-right">
                     <div class="kc-locale-wrapper">
                             <div class="kc-locale-dropdownkc-dropdown">
@@ -44,6 +45,7 @@
                             </div>
                     </div>
                 </div>
+                </#if>
             </div>
         </div>
 
@@ -62,6 +64,7 @@
                 </ul>
                 <div id="side-menu-bis" class="hidden-sm hidden-md hidden-lg hidden-xl">
                 <a href="${url.logoutUrl}">${msg("doSignOut")}</a>
+                <#if realm.internationalizationEnabled>
                 <div class="kc-locale pull-left">
                     <div  class="kc-locale-wrapper">
                             <div class="kc-dropdown kc-locale-dropdown">
@@ -74,6 +77,7 @@
                             </div>
                     </div>
                 </div>
+                </#if>
                 </div>
             </div>
         </aside>
