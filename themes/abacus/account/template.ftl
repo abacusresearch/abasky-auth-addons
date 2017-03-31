@@ -28,7 +28,7 @@
                 <i class="fa fa-bars"></i>
             </div>
             <div class="col-sm-6 col-xs-12">
-                <div id="kc-logo"><img src="${url.resourcesPath}/img/logo.png" alt="Abacus logo"></div>
+                <div id="kc-logo"><img src="${url.resourcesPath}/img/logo.svg" alt="Abacus logo"></div>
             </div>
             <div class="col-sm-6 col-xs-6 text-right hidden-xs">
                 <a class="btn btn-sm btn-default" href="${url.logoutUrl}">${msg("doSignOut")}</a>
