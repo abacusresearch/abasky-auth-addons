@@ -1,4 +1,4 @@
-<#macro mainLayout active bodyClass panel=true>
+<#macro mainLayout active bodyClass panel=true showAuthenticator=true>
 <!doctype html>
 <html>
 <head>
@@ -52,7 +52,9 @@
                 <ul class="nav" id="side-menu">
                      <li class="<#if active=='account'>active</#if>"><a href="${url.accountUrl}">${msg("account")}</a></li>
                         <#if features.passwordUpdateSupported><li class="<#if active=='password'>active</#if>"><a href="${url.passwordUrl}">${msg("password")}</a></li></#if>
+                        <#if showAuthenticator>
                         <li class="<#if active=='totp'>active</#if>"><a href="${url.totpUrl}">${msg("authenticator")}</a></li>
+                        </#if>
                         <#if features.identityFederation><li class="<#if active=='social'>active</#if>"><a href="${url.socialUrl}">${msg("federatedIdentity")}</a></li></#if>
                         <li class="<#if active=='sessions'>active</#if>"><a href="${url.sessionsUrl}">${msg("sessions")}</a></li>
                         <li class="<#if active=='applications'>active</#if>"><a href="${url.applicationsUrl}">${msg("applications")}</a></li>
