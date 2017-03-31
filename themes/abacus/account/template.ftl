@@ -52,7 +52,7 @@
                 <ul class="nav" id="side-menu">
                      <li class="<#if active=='account'>active</#if>"><a href="${url.accountUrl}">${msg("account")}</a></li>
                         <#if features.passwordUpdateSupported><li class="<#if active=='password'>active</#if>"><a href="${url.passwordUrl}">${msg("password")}</a></li></#if>
-                        <#if properties.showAuthenticator?has_content && properties.showAuthenticator=='true' >
+                        <#if !properties.hideAuthenticator?has_content || properties.hideAuthenticator!='true' >
                         <li class="<#if active=='totp'>active</#if>"><a href="${url.totpUrl}">${msg("authenticator")}</a></li>
                         </#if>
                         <#if features.identityFederation><li class="<#if active=='social'>active</#if>"><a href="${url.socialUrl}">${msg("federatedIdentity")}</a></li></#if>
