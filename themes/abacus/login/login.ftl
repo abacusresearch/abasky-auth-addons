@@ -9,7 +9,7 @@
             <#if client??>
             <h4 class="m-t-md m-b-xl">${msg('pleaseLogIntoClient', client.name)}</h4>
             <#else>
-            <h4 class="m-t-md m-b-xl">${msg('pleaseLogInto')}</h4>
+            <h4 class="m-t-md m-b-xl">${msg('pleaseLogIn')}</h4>
             </#if>
             <form id="kc-form-login" class="m-t-xl" action="${url.loginAction}" method="post">
                 <div class="floating-label-wrap m-b-md">
