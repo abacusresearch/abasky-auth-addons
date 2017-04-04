@@ -11,8 +11,12 @@
             });
         }, 100);
     });
+    $(document).on('click', function() {
+        $('.kc-locale.hover').removeClass('hover');
+    })
     $(document).on("click", ".kc-current-locale-link", function(e) {
         e.preventDefault();
+        e.stopPropagation();
         $(this).parents('.kc-locale').first().toggleClass('hover');
     });
 })();
