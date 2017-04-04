@@ -55,12 +55,22 @@ a.text-underline {
     border: 1px solid #e4e5e7;
     transition: 0.4s;
 }
-#header .kc-locale:hover ul,
-#kc-footer .kc-locale:hover ul {
+#header .kc-locale.hover ul,
+#kc-footer .kc-locale.hover ul {
     opacity: 1;
     visibility: visible;
     margin: 0;
 }
+
+@media (min-width: 1025px) {
+    #header .kc-locale:hover ul,
+    #kc-footer .kc-locale:hover ul {
+        opacity: 1;
+        visibility: visible;
+        margin: 0;
+    }
+}
+
 .kc-locale ul li a {
     display: block;
     padding: 1px 11px;
@@ -153,7 +163,7 @@ a.kc-current-locale-link:after {
         bottom: 29px;
         top: auto;
     }
-    .kc-locale:hover ul {
+    .kc-locale.hover ul {
         display: block;
     }
 }
