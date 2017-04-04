@@ -8,7 +8,7 @@
   </head>
   <body class="" style="background-color:#f5f5f7;font-family:HelveticaNeue,sans-serif;-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.4;margin:0;padding:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
           <div class="content" style="box-sizing:border-box;display:block;max-width:510px;padding:30px;background-color:#fff;margin:0 auto;color:#5c646e">
-          <img border="0" style="float:right;display:block" alt="Abacus" title="Abacus" width="163" height="36" src="https://www.abacus.ch/fileadmin/templates/main/pics/abacus_logo.gif"/>
+          <img border="0" style="float:right;display:block" alt="Abacus" title="Abacus" width="163" height="36" src="https://cdn.frontify.com/api/screen/thumbnail/cSTO-Cuh1Oiu6gfdh4EI5MOeTPkUfjm5Sqc1T17DvYn6HNrLwON9fvyZ4ptH5zj_0Af76twWTe_MT6YSgVA9tw/814"/>
           <div style="clear:both;display:block;border:0;height:35px;margin:0;"></div>
           <h2 style="font-size: 22px; font-weight: bold;color:#2b2b2b;margin-top:0;margin-bottom:20px;"><#nested "title"></h2>
           <div style="margin-bottom: 27px;"><#nested "content"></div>
