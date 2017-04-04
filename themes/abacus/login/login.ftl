@@ -7,7 +7,7 @@
     <#elseif section = "form">
         <#if realm.password>
             <#if client??>
-            <h4 class="m-t-md m-b-xl">${msg('pleaseLogIntoClient')} <#if client.name??>${client.name}<#else>${client.clientId}</#if></h4>
+            <h4 class="m-t-md m-b-xl"><#if client.name??>${msg('pleaseLogIntoClient', client.name)}<#else>${msg('pleaseLogIntoClient', client.clientId)}</#if></h4>
             <#else>
             <h4 class="m-t-md m-b-xl">${msg('pleaseLogIn')}</h4>
             </#if>
