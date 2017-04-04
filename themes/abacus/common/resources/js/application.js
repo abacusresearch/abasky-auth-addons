@@ -11,4 +11,8 @@
             });
         }, 100);
     });
+    $(document).on("click", ".kc-current-locale-link", function(e) {
+        e.preventDefault();
+        $(this).parents('.kc-locale').first().toggleClass('hover');
+    });
 })();
