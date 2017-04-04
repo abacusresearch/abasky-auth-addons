@@ -152,6 +152,8 @@ body.page-small.show-sidebar #wrapper {
     position: relative;
     max-height: 200px;
     overflow: hidden;
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Tables */
