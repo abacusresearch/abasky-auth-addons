@@ -9,5 +9,6 @@
 !changeLogger.xsl
 !changeProxy.xsl
 !removeHeaders.xsl
+!changeWelcomeTheme.xsl
 !docker-compose.yml
 !themes/
