@@ -8,5 +8,6 @@
 !README.md
 !changeLogger.xsl
 !changeProxy.xsl
+!changeWelcomeTheme.xsl
 !docker-compose.yml
 !themes/
