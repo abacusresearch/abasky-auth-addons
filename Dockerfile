@@ -2,6 +2,7 @@ FROM jboss/keycloak-mysql
 
 COPY changeProxy.xsl /opt/jboss/keycloak/
 COPY changeLogger.xsl /opt/jboss/keycloak/
+COPY removeHeaders.xsl /opt/jboss/keycloak/
 COPY changeWelcomeTheme.xsl /opt/jboss/keycloak/
 
 # import themes
@@ -27,6 +28,15 @@ RUN java -jar /usr/share/java/saxon.jar \
       -xsl:/opt/jboss/keycloak/changeLogger.xsl \
       -o:/opt/jboss/keycloak/standalone/configuration/standalone-ha.xml && \
     rm /opt/jboss/keycloak/changeLogger.xsl && \
+    java -jar /usr/share/java/saxon.jar \
+      -s:/opt/jboss/keycloak/standalone/configuration/standalone.xml \
+      -xsl:/opt/jboss/keycloak/removeHeaders.xsl \
+      -o:/opt/jboss/keycloak/standalone/configuration/standalone.xml && \
+    java -jar /usr/share/java/saxon.jar \
+      -s:/opt/jboss/keycloak/standalone/configuration/standalone-ha.xml \
+      -xsl:/opt/jboss/keycloak/removeHeaders.xsl \
+      -o:/opt/jboss/keycloak/standalone/configuration/standalone-ha.xml && \
+    rm /opt/jboss/keycloak/removeHeaders.xsl && \
     java -jar /usr/share/java/saxon.jar \
       -s:/opt/jboss/keycloak/standalone/configuration/standalone.xml \
       -xsl:/opt/jboss/keycloak/changeWelcomeTheme.xsl \
