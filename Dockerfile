@@ -46,6 +46,7 @@ RUN java -jar /usr/share/java/saxon.jar \
       -xsl:/opt/jboss/keycloak/changeWelcomeTheme.xsl \
       -o:/opt/jboss/keycloak/standalone/configuration/standalone-ha.xml && \
     rm /opt/jboss/keycloak/changeWelcomeTheme.xsl && \
+    echo '' >> /opt/jboss/keycloak/bin/standalone.conf \
     echo 'JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF8"' >> /opt/jboss/keycloak/bin/standalone.conf \
     chown -R jboss:root /opt/jboss/keycloak/standalone && \
     chmod -R g+rw /opt/jboss/keycloak/standalone && \
