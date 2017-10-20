@@ -51,5 +51,5 @@ RUN java -jar /usr/share/java/saxon.jar \
     find /opt/jboss/keycloak/standalone -type d -exec chmod g+x "{}" \;
 
 RUN \
-    echo 'JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF8"' >> /opt/jboss/keycloak/bin/standalone.conf \
+    echo 'JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF8"' >> /opt/jboss/keycloak/bin/standalone.conf
 USER jboss
