@@ -41,6 +41,16 @@
                     <input type="password" id="password-confirm" data-value class="form-control" name="password-confirm" required>
                     <label for="password-confirm" class="${properties.kcLabelClass!}">${msg("passwordConfirm")}</label>
                 </div>
+
+                <div class="m-t-sm">
+                    ${msg("passwordPolicyTitle")}:
+                    <ul>
+                        <li>${msg("passwordPolicyMinCharacters")}</li>
+                        <li>${msg("passwordPolicyMinNumbers")}</li>
+                        <li>${msg("passwordPolicyMinLowercase")}</li>
+                        <li>${msg("passwordPolicyMinUppercase")}</li>
+                    </ul>
+                </div>
             </#if>
 
 
