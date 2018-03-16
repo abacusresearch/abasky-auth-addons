@@ -40,6 +40,10 @@
 
             <div class="col-sm-10 col-md-10">
                 <input type="password" class="form-control" id="password-confirm" name="password-confirm" autocomplete="off">
+                <small id="static-pwd-policy-disclaimer" class="m-t-xs">${msg("passwordPolicyMin")}: ${msg("passwordPolicyMinCharacters")} &#8226;
+                    ${msg("passwordPolicyMinNumbers")} &#8226; ${msg("passwordPolicyMinLowercase")} &#8226;
+                    ${msg("passwordPolicyMinUppercase")}</small>
+
             </div>
         </div>
 
