@@ -18,6 +18,10 @@
             <div class="floating-label-wrap m-b-md">
                     <input type="password" data-value id="password-confirm" name="password-confirm" class="form-control" autocomplete="off" required>
                     <label for="password-confirm">${msg("passwordConfirm")}</label>
+                    <small id="static-pwd-policy-disclaimer" class="m-t-xs">${msg("passwordPolicyMin")}: ${msg("passwordPolicyMinCharacters")} &#8226;
+                            ${msg("passwordPolicyMinNumbers")} &#8226; ${msg("passwordPolicyMinLowercase")} &#8226;
+                            ${msg("passwordPolicyMinUppercase")}</small>
+
             </div>
 
             <div id="kc-form-button-login" class="${properties.kcFormButtonsClass!}">

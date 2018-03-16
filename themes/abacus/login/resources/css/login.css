@@ -74,6 +74,10 @@ body {
     line-height: 36px;
 }
 
+#static-pwd-policy-disclaimer {
+    font-size: 11px;
+}
+
 /* Social providers */
 
 #kc-social-providers .btn {
