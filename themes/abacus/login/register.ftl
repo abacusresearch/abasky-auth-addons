@@ -40,6 +40,9 @@
                 <div class="floating-label-wrap">
                     <input type="password" id="password-confirm" data-value class="form-control" name="password-confirm" required>
                     <label for="password-confirm" class="${properties.kcLabelClass!}">${msg("passwordConfirm")}</label>
+                    <small id="static-pwd-policy-disclaimer" class="m-t-xs">${msg("passwordPolicyMin")}: ${msg("passwordPolicyMinCharacters")} &#8226;
+                        ${msg("passwordPolicyMinNumbers")} &#8226; ${msg("passwordPolicyMinLowercase")} &#8226;
+                        ${msg("passwordPolicyMinUppercase")}</small>
                 </div>
             </#if>
 
