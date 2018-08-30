@@ -8,6 +8,9 @@ COPY changeWelcomeTheme.xsl /opt/jboss/keycloak/
 # import themes
 COPY themes /opt/jboss/keycloak/themes/
 
+# install providers
+COPY providers /opt/jboss/keycloak/providers/
+
 # required for chown operations
 USER root
 RUN java -jar /usr/share/java/saxon.jar \

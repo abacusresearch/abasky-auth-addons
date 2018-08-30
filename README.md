@@ -51,3 +51,8 @@ Specify user for MySQL database (optional, default is `keycloak`).
 #### MYSQL_PASSWORD
 
 Specify password for MySQL database (optional, default is `keycloak`).
+
+## Prometheus Plugin
+
+The prometheus plugin from https://github.com/aerogear/keycloak-metrics-spi is used and put in the providers directory.
+Revision: 2c3f1d1384221e283e3beda66ff96f914f83f3ce
