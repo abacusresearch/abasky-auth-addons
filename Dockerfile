@@ -1,4 +1,4 @@
-FROM jboss/keycloak-mysql
+FROM keycloak-mysql:2.5.5.Final
 
 COPY changeProxy.xsl /opt/jboss/keycloak/
 COPY changeLogger.xsl /opt/jboss/keycloak/
