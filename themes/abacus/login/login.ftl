@@ -4,13 +4,27 @@
         ${msg("loginTitle",(realm.displayName!''))}
     <#elseif section = "header">
         ${msg("loginTitleHtml",(realm.displayNameHtml!''))}
+    <#elseif section = "content-header">
+        <div id="aba-login-intro" class="clearfix">
+            <#if client??>
+                <h4 class="m-t-md m-b-md fa-pull-left"><#if client.name??>${msg('pleaseLogIntoClient', client.name)}<#else>${msg('pleaseLogIntoClient', client.clientId)}</#if></h4>
+            <#else>
+                <h4 class="m-t-md m-b-md fa-pull-left">${msg('pleaseLogIn')}</h4>
+            </#if>
+            <#if realm.password && realm.registrationAllowed && !usernameEditDisabled??>
+                    <div id="kc-registration-intro" class="m-t-md m-b-md fa-pull-right">
+                        <span><a href="${url.registrationUrl}" class="text-underline">${msg("doRegister")}</a></span>
+                    </div>
+            </#if>
+        </div>
     <#elseif section = "form">
         <#if realm.password>
-            <#if client??>
-            <h4 class="m-t-md m-b-xl"><#if client.name??>${msg('pleaseLogIntoClient', client.name)}<#else>${msg('pleaseLogIntoClient', client.clientId)}</#if></h4>
-            <#else>
-            <h4 class="m-t-md m-b-xl">${msg('pleaseLogIn')}</h4>
-            </#if>
+            <div id="aba-divider">
+                <div>
+                    <span>${msg("or")}</span>
+                </div>
+            </div>
+
             <form id="kc-form-login" class="m-t-xl" action="${url.loginAction}" method="post">
                 <div class="floating-label-wrap m-b-md">
                         <#if usernameEditDisabled??>
@@ -50,8 +64,13 @@
                             <a id="kc-forgot-password" class="text-underline" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a>
                         </#if>
                     </div>
-                 </div>
+                </div>
             </form>
+            <#if realm.password && realm.registrationAllowed && !usernameEditDisabled??>
+                    <div id="kc-registration" class="m-b-md m-t-sm">
+                        <span><a href="${url.registrationUrl}" class="text-underline">${msg("doRegister")}</a></span>
+                    </div>
+            </#if>
         </#if>
     <#elseif section = "info" >
 
@@ -60,11 +79,6 @@
                     <#list social.providers as p>
                         <a href="${p.loginUrl}" id="zocial-${p.alias}" class="btn btn-default btn-block text-left ${p.providerId}"> <span class="text-left">${msg('signWith')} ${p.displayName}</span></a>
                     </#list>
-            </div>
-        </#if>
-        <#if realm.password && realm.registrationAllowed && !usernameEditDisabled??>
-            <div id="kc-registration">
-               <span>${msg("noAccount")} <a href="${url.registrationUrl}" class="text-underline">${msg("doRegister")}</a></span>
             </div>
         </#if>
     </#if>
