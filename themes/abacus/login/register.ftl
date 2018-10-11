@@ -6,11 +6,17 @@
         ${msg("registerWithTitleHtml",(realm.displayNameHtml!''))}
     <#elseif section = "content-header">
         <div id="aba-reg-intro" class="clearfix">
-            <#if client??>
-                <h4 class="m-t-md m-b-md fa-pull-left"><#if client.name??>${msg('pleaseRegisterForClient', client.name)}<#else>${msg('pleaseRegisterForClient', client.clientId)}</#if></h4>
-            <#else>
-                <h4 class="m-t-md m-b-md fa-pull-left">${msg('pleaseLogIn')}</h4>
-            </#if>
+            <h4 class="m-t-md m-b-md fa-pull-left">
+                <#if client??>
+                    <#if client.name??>
+                        ${msg('pleaseRegisterForClient', client.name)}
+                    <#else>
+                        ${msg('pleaseRegisterForClient', client.clientId)}
+                    </#if>
+                <#else>
+                    ${msg('pleaseLogIn')}
+                </#if>
+            </h4>
             <div id="aba-back-to-login" class="m-b-md fa-pull-right">
                 <a class="text-underline" id="kc-back-to-login" class="text-underline"
                    href="${url.loginUrl}">${msg("alredyHaveAccount")}</a>
@@ -23,17 +29,18 @@
             </div>
         </div>
 
-        <form id="kc-register-form" class="${properties.kcFormClass!} m-t-xl" action="${url.registrationAction}" method="post">
+        <form id="kc-register-form" class="${properties.kcFormClass!} m-t-xl" action="${url.registrationAction}"
+              method="post">
             <input type="text" readonly value="this is not a login form" style="display: none;">
             <input type="password" readonly value="this is not a login form" style="display: none;">
-          <#if !realm.registrationEmailAsUsername>
+            <#if !realm.registrationEmailAsUsername>
                 <div class="floating-label-wrap">
                     <input type="text" id="username" data-value="${(register.formData.username!'')?html}"
                            class="form-control" name="username" value="${(register.formData.username!'')?html}" required
                            autofocus>
                     <label for="username" class="${properties.kcLabelClass!}">${msg("username")}</label>
                 </div>
-          </#if>
+            </#if>
             <div class="floating-label-wrap">
                 <input type="text" id="firstName" data-value="${(register.formData.firstName!'')?html}"
                        class="form-control" name="firstName" value="${(register.formData.firstName!'')?html}" required
@@ -72,9 +79,9 @@
 
             <div id="kc-form-submit" class="row m-t-md-xl">
                 <#if recaptchaRequired??>
-                <div class="col-md-7 col-sm-7 col-xs-12">
-                    <div class="g-recaptcha" data-size="normal" data-sitekey="${recaptchaSiteKey}"></div>
-                </div>
+                    <div class="col-md-7 col-sm-7 col-xs-12">
+                        <div class="g-recaptcha" data-size="normal" data-sitekey="${recaptchaSiteKey}"></div>
+                    </div>
                 </#if>
                 <div id="kc-form-button-login" class="col-md-5 col-sm-5 col-xs-12 m-t-sm">
                     <input class="btn btn-primary pull-right" type="submit" value="${msg("doRegister")}"/>
@@ -84,9 +91,11 @@
     <#elseif section = "info" >
         <#if realm.password && social.providers??>
             <div id="kc-social-providers" class="high">
-                    <#list social.providers as p>
-                        <a href="${p.loginUrl}" id="zocial-${p.alias}" class="btn btn-default btn-block text-left ${p.providerId}"> <span class="text-left">${msg('signWith')} ${p.displayName}</span></a>
-                    </#list>
+                <#list social.providers as p>
+                    <a href="${p.loginUrl}" id="zocial-${p.alias}"
+                       class="btn btn-default btn-block text-left ${p.providerId}"> <span
+                            class="text-left">${msg('signWith')} ${p.displayName}</span></a>
+                </#list>
             </div>
         </#if>
     </#if>
