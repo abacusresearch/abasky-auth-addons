@@ -6,5 +6,7 @@
   ${msg("executeActionsBodyHtml", realmName)}
 <#elseif section = "contentAfter">
   ${msg("executeActionsBodyHtmlAfter", linkExpiration)}
+<#elseif section = "link">
+  <#if link??>${link}</#if>
 </#if>
 </@layout.registrationLayout>
