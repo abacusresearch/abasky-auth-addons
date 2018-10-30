@@ -101,10 +101,6 @@ body {
     margin-bottom: 40px;
 }
 
-#kc-social-providers .btn {
-    font-size: 13px;
-}
-
 #kc-social-providers #zocial-google {
     background-image: url("../img/icon-google.png");
 }
@@ -203,7 +199,7 @@ select:-webkit-autofill {
     }
 
     #kc-social-providers.high > a:first-child:nth-last-child(2) {
-        margin-top: 119px;
+        margin-top: 106px;
     }
 
     #kc-social-providers > a:first-child:nth-last-child(3) {
@@ -211,21 +207,22 @@ select:-webkit-autofill {
     }
 
     #kc-social-providers.high > a:first-child:nth-last-child(3) {
-        margin-top: 83px;
+        margin-top: 61px;
     }
 
     #kc-social-providers > a:first-child:nth-last-child(4) {
-        margin-top: -37px;
+        margin-top: -53px;
     }
 
     #kc-social-providers.high > a:first-child:nth-last-child(4) {
-        margin-top: 44px;
+        margin-top: 20px;
     }
 
     #aba-divider {
         position: absolute;
         height: calc(100% + 10px);
         text-align: center;
+        width: 40px;
         top: -10px;
         left: -20px;
     }
@@ -276,7 +273,7 @@ select:-webkit-autofill {
     }
 
     #kc-social-providers {
-        max-width: 250px;
+        max-width: 320px;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 20px;

@@ -20,7 +20,7 @@
     padding: 2px;
 }
 
-#kc-locale:hover ul {
+#kc-locale.expand ul {
     display: block;
     margin: 0;
 }

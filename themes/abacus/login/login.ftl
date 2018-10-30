@@ -67,7 +67,7 @@
 
                 <div id="kc-form-submit" class="row">
                     <div id="kc-form-button-login" class="col-md-6 col-sm-6 col-xs-6">
-                        <input class="btn btn-primary pull-right" name="login" id="kc-login" type="submit"
+                        <input class="btn btn-lg btn-primary pull-right" name="login" id="kc-login" type="submit"
                                value="${msg("doLogIn")}">
                     </div>
                     <div id="kc-form-button-password" class="col-md-6 col-sm-6 col-xs-6 text-left">
@@ -89,7 +89,7 @@
             <div id="kc-social-providers">
                 <#list social.providers as p>
                     <a href="${p.loginUrl}" id="zocial-${p.alias}"
-                       class="btn btn-default btn-block text-left ${p.providerId}"> <span
+                       class="btn btn-lg btn-default btn-block text-left ${p.providerId}"> <span
                             class="text-left">${msg('signWith')} ${p.displayName}</span></a>
                 </#list>
             </div>
