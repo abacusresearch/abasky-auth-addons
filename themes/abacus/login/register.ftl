@@ -84,7 +84,7 @@
                     </div>
                 </#if>
                 <div id="kc-form-button-login" class="col-md-5 col-sm-5 col-xs-12 m-t-sm">
-                    <input class="btn btn-primary pull-right" type="submit" value="${msg("doRegister")}"/>
+                    <input class="btn btn-primary btn-lg pull-right" type="submit" value="${msg("doRegister")}"/>
                 </div>
             </div>
         </form>
@@ -93,8 +93,8 @@
             <div id="kc-social-providers" class="high">
                 <#list social.providers as p>
                     <a href="${p.loginUrl}" id="zocial-${p.alias}"
-                       class="btn btn-default btn-block text-left ${p.providerId}"> <span
-                            class="text-left">${msg('signWith')} ${p.displayName}</span></a>
+                       class="btn btn-default btn-block btn-lg text-left ${p.providerId}"> <span
+                            class="text-left">${msg('registerWith', p.displayName)}</span></a>
                 </#list>
             </div>
         </#if>
