@@ -6,5 +6,7 @@
   ${msg("identityProviderLinkBodyHtml", realmName, identityProviderAlias, identityProviderContext.username)}
 <#elseif section = "contentAfter">
   ${msg("identityProviderLinkBodyHtmlAfter", linkExpiration, identityProviderAlias, identityProviderContext.username)}
+<#elseif section = "link">
+  <#if link??>${link}</#if>
 </#if>
 </@layout.registrationLayout>

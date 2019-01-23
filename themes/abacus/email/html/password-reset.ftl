@@ -6,5 +6,7 @@
   ${msg("passwordResetBodyHtml", realmName)}
 <#elseif section = "contentAfter">
   ${msg("passwordResetBodyHtmlAfter", linkExpiration)}
+<#elseif section = "link">
+  <#if link??>${link}</#if>
 </#if>
 </@layout.registrationLayout>

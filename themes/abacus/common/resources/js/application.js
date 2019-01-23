@@ -12,11 +12,11 @@
         }, 100);
     });
     $(document).on('click', function() {
-        $('.kc-locale.hover').removeClass('hover');
+        $('.kc-locale.expand').removeClass('expand');
     })
     $(document).on("click", ".kc-current-locale-link", function(e) {
         e.preventDefault();
         e.stopPropagation();
-        $(this).parents('.kc-locale').first().toggleClass('hover');
+        $(this).parents('.kc-locale').first().toggleClass('expand');
     });
 })();
