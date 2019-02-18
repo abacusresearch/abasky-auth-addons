@@ -1,43 +1,44 @@
 <#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true onlyPanel=false>
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!doctype html>
+    <html xmlns="http://www.w3.org/1999/xhtml" class="${properties.kcHtmlClass!}">
 
-    <#if properties.meta?has_content>
-        <#list properties.meta?split(' ') as meta>
-            <meta name="${meta?split('==')[0]}" content="${meta?split('==')[1]}">
-        </#list>
-    </#if>
-    <title><#nested "title"></title>
-    <link rel="icon" href="${url.resourcesPath}/img/favicon.ico">
-    <#if properties.styles?has_content>
-        <#list properties.styles?split(' ') as style>
-            <link href="${url.resourcesPath}/${style}" rel="stylesheet">
-        </#list>
-    </#if>
-    <#if properties.scripts?has_content>
-        <#list properties.scripts?split(' ') as script>
-            <script src="${url.resourcesPath}/${script}" type="text/javascript"></script>
-        </#list>
-    </#if>
-    <#if scripts??>
-        <#list scripts as script>
-            <script src="${script}" type="text/javascript"></script>
-        </#list>
-    </#if>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="robots" content="noindex, nofollow">
 
-<body>
+        <#if properties.meta?has_content>
+            <#list properties.meta?split(' ') as meta>
+                <meta name="${meta?split('==')[0]}" content="${meta?split('==')[1]}">
+            </#list>
+        </#if>
+        <title>${msg("loginTitle",(realm.displayName!''))}</title>
+        <link rel="icon" href="${url.resourcesPath}/img/favicon.ico" >
+        <#if properties.styles?has_content>
+            <#list properties.styles?split(' ') as style>
+                <link href="${url.resourcesPath}/${style}" rel="stylesheet" >
+            </#list>
+        </#if>
+        <#if properties.scripts?has_content>
+            <#list properties.scripts?split(' ') as script>
+                <script src="${url.resourcesPath}/${script}" type="text/javascript"></script>
+            </#list>
+        </#if>
+        <#if scripts??>
+            <#list scripts as script>
+                <script src="${script}" type="text/javascript"></script>
+            </#list>
+        </#if>
+    </head>
+
+    <body>
     <div id="kc-container">
         <div id="kc-container-wrapper"
-            <#if displayInfo>
-                class="form-panel-container login-container login-container--2column"
-            <#else>
-                class="form-panel-container login-container"
-            </#if>
+                <#if displayInfo>
+                    class="form-panel-container login-container login-container--2column"
+                <#else>
+                    class="form-panel-container login-container"
+                </#if>
         >
 
             <#if !onlyPanel>
@@ -52,17 +53,17 @@
                     <#if displayMessage && message?has_content && !onlyPanel>
                         <div class="alert alert-${message.type} col-md-12">
                             <#if message.type = 'success'><span
-                                    class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
+                                class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
                             <#if message.type = 'warning'><span
-                                    class="${properties.kcFeedbackWarningIcon!}"></span></#if>
+                                class="${properties.kcFeedbackWarningIcon!}"></span></#if>
                             <#if message.type = 'error'><span class="${properties.kcFeedbackErrorIcon!}"></span></#if>
                             <#if message.type = 'info'><span class="${properties.kcFeedbackInfoIcon!}"></span></#if>
-                            <span class="kc-feedback-text">${message.summary}</span>
+                            <span class="kc-feedback-text">${kcSanitize(message.summary)?no_esc}</span>
                         </div>
                     </#if>
 
                     <div id="aba-content-header" class="col-md-12">
-                              <#nested "content-header">
+                        <#nested "content-header">
                     </div>
 
                     <#if displayInfo>
@@ -74,11 +75,11 @@
                     </#if>
 
                     <div id="kc-form"
-                        <#if displayInfo>
-                            class="col-md-7"
-                        <#else>
-                            class="col-md-12"
-                        </#if>
+                            <#if displayInfo>
+                                class="col-md-7"
+                            <#else>
+                                class="col-md-12"
+                            </#if>
                     >
                         <div id="kc-form-wrapper" <#if onlyPanel>class="text-center"</#if>>
                             <#nested "form">
@@ -87,30 +88,30 @@
                 </div>
             </div>
             <#if !onlyPanel>
-            <div id="kc-footer" class="row">
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                    &copy; <a href="https://www.abacus.ch/" target="_blank">Abacus Research AG</a>
-                </div>
-                <#if realm.internationalizationEnabled>
-                    <div class="col-md-6 col-sm-6 col-xs-6 text-right">
-                        <div class="kc-locale pull-right">
-                            <div class="kc-locale-wrapper">
-                                <div class="kc-dropdown kc-locale-dropdown">
-                                    <a href="#" class="kc-current-locale-link">${locale.current}</a>
-                                    <ul>
-                                        <#list locale.supported as l>
-                                            <li class="kc-dropdown-item"><a href="${l.url}">${l.label}</a></li>
-                                        </#list>
-                                    </ul>
+                <div id="kc-footer" class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        &copy; <a href="https://www.abacus.ch/" target="_blank">Abacus Research AG</a>
+                    </div>
+                    <#if realm.internationalizationEnabled && locale.supported?size gt 1>
+                        <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                            <div class="kc-locale pull-right">
+                                <div class="kc-locale-wrapper">
+                                    <div class="kc-dropdown kc-locale-dropdown">
+                                        <a href="#" class="kc-current-locale-link">${locale.current}</a>
+                                        <ul>
+                                            <#list locale.supported as l>
+                                                <li class="kc-dropdown-item"><a href="${l.url}">${l.label}</a></li>
+                                            </#list>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </#if>
-            </div>
+                    </#if>
+                </div>
             </#if>
         </div>
     </div>
-</body>
-</html>
+    </body>
+    </html>
 </#macro>

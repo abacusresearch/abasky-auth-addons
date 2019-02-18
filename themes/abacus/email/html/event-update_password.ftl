@@ -1,9 +1,9 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout; section>
 <#if section = "title">
-  ${msg("eventUpdatePasswordSubject")}
+  ${kcSanitize(msg("eventUpdatePasswordSubject"))?no_esc}
 <#elseif section = "content">
-  ${msg("eventUpdatePasswordBodyHtml",event.date, event.ipAddress)}
+  ${kcSanitize(msg("eventUpdatePasswordBodyHtml",event.date, event.ipAddress))?no_esc}
 <#elseif section = "link">
   <#if link??>${link}</#if>
 </#if>

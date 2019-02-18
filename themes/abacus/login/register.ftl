@@ -18,8 +18,7 @@
                 </#if>
             </h4>
             <div id="aba-back-to-login" class="m-b-md fa-pull-right">
-                <a class="text-underline" id="kc-back-to-login" class="text-underline"
-                   href="${url.loginUrl}">${msg("alredyHaveAccount")}</a>
+                <a class="text-underline" href="${url.loginUrl}">${kcSanitize(msg("alredyHaveAccount"))?no_esc}</a>
             </div>
         </div>
     <#elseif section = "form">
@@ -31,38 +30,37 @@
 
         <form id="kc-register-form" class="${properties.kcFormClass!} m-t-xl" action="${url.registrationAction}"
               method="post">
-            <input type="text" readonly value="this is not a login form" style="display: none;">
-            <input type="password" readonly value="this is not a login form" style="display: none;">
             <#if !realm.registrationEmailAsUsername>
                 <div class="floating-label-wrap">
-                    <input type="text" id="username" data-value="${(register.formData.username!'')?html}"
-                           class="form-control" name="username" value="${(register.formData.username!'')?html}" required
+                    <input type="text" id="username" data-value="${(register.formData.username!'')}"
+                           class="form-control" name="username" value="${(register.formData.username!'')}" required
                            autofocus>
                     <label for="username" class="${properties.kcLabelClass!}">${msg("username")}</label>
                 </div>
             </#if>
             <div class="floating-label-wrap">
-                <input type="text" id="firstName" data-value="${(register.formData.firstName!'')?html}"
-                       class="form-control" name="firstName" value="${(register.formData.firstName!'')?html}" required
+                <input type="text" id="firstName" data-value="${(register.formData.firstName!'')}"
+                       class="form-control" name="firstName" value="${(register.formData.firstName!'')}" required
                        autofocus>
                 <label for="firstName" class="${properties.kcLabelClass!}">${msg("firstName")}</label>
             </div>
 
             <div class="floating-label-wrap">
-                <input type="text" id="lastName" data-value="${(register.formData.lastName!'')?html}"
-                       class="form-control" name="lastName" value="${(register.formData.lastName!'')?html}" required>
+                <input type="text" id="lastName" data-value="${(register.formData.lastName!'')}"
+                       class="form-control" name="lastName" value="${(register.formData.lastName!'')}" required>
                 <label for="lastName" class="${properties.kcLabelClass!}">${msg("lastName")}</label>
             </div>
 
             <div class="floating-label-wrap">
-                <input type="email" id="email" data-value="${(register.formData.email!'')?html}" class="form-control"
-                       name="email" value="${(register.formData.email!'')?html}" required>
+                <input type="email" id="email" data-value="${(register.formData.email!'')}" class="form-control"
+                       name="email" value="${(register.formData.email!'')}" required autocomplete="email">
                 <label for="email" class="${properties.kcLabelClass!}">${msg("email")}</label>
             </div>
 
             <#if passwordRequired>
                 <div class="floating-label-wrap">
-                    <input type="password" id="password" data-value class="form-control" name="password" required>
+                    <input type="password" id="password" data-value class="form-control" name="password" required
+                           autocomplete="new-password">
                     <label for="password" class="${properties.kcLabelClass!}">${msg("password")}</label>
                 </div>
 
@@ -94,7 +92,7 @@
                 <#list social.providers as p>
                     <a href="${p.loginUrl}" id="zocial-${p.alias}"
                        class="btn btn-default btn-block btn-lg text-left ${p.providerId}"> <span
-                            class="text-left">${msg('registerWith', p.displayName)}</span></a>
+                                class="text-left">${msg('registerWith', p.displayName)}</span></a>
                 </#list>
             </div>
         </#if>

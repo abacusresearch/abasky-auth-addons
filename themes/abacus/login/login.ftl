@@ -18,9 +18,9 @@
                 </#if>
             </h4>
             <#if realm.password && realm.registrationAllowed && !usernameEditDisabled??>
-                    <div id="kc-registration-intro" class="m-t-md m-b-md fa-pull-right">
-                        <span><a href="${url.registrationUrl}" class="text-underline">${msg("doRegister")}</a></span>
-                    </div>
+                <div id="kc-registration-intro" class="m-t-md m-b-md fa-pull-right">
+                    <span><a href="${url.registrationUrl}" class="text-underline">${msg("doRegister")}</a></span>
+                </div>
             </#if>
         </div>
     <#elseif section = "form">
@@ -34,11 +34,11 @@
             <form id="kc-form-login" class="m-t-xl" action="${url.loginAction}" method="post">
                 <div class="floating-label-wrap m-b-md">
                     <#if usernameEditDisabled??>
-                        <input id="username" data-value="${(login.username!'')?html}" class="form-control"
-                               name="username" value="${(login.username!'')?html}" type="text" disabled>
+                        <input id="username" data-value="${(login.username!'')}" class="form-control"
+                               name="username" value="${(login.username!'')}" type="text" disabled>
                     <#else>
-                        <input id="username" data-value="${(login.username!'')?html}" class="form-control"
-                               name="username" value="${(login.username!'')?html}" type="text" autofocus
+                        <input id="username" data-value="${(login.username!'')}" class="form-control"
+                               name="username" value="${(login.username!'')}" type="text" autofocus
                                autocomplete="off">
                     </#if>
                     <label for="username"><#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if></label>
@@ -90,9 +90,10 @@
                 <#list social.providers as p>
                     <a href="${p.loginUrl}" id="zocial-${p.alias}"
                        class="btn btn-lg btn-default btn-block text-left ${p.providerId}"> <span
-                            class="text-left">${msg('signWith')} ${p.displayName}</span></a>
+                                class="text-left">${msg('signWith')} ${p.displayName}</span></a>
                 </#list>
             </div>
         </#if>
     </#if>
+
 </@layout.registrationLayout>

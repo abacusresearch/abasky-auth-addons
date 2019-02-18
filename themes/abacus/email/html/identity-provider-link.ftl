@@ -1,11 +1,11 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout; section>
 <#if section = "title">
-  ${msg("identityProviderLinkSubject")}
+  ${kcSanitize(msg("identityProviderLinkSubject", identityProviderAlias))?no_esc}
 <#elseif section = "content">
-  ${msg("identityProviderLinkBodyHtml", realmName, identityProviderAlias, identityProviderContext.username)}
+  ${kcSanitize(msg("identityProviderLinkBodyHtml", realmName, identityProviderAlias, identityProviderContext.username))?no_esc}
 <#elseif section = "contentAfter">
-  ${msg("identityProviderLinkBodyHtmlAfter", linkExpiration, identityProviderAlias, identityProviderContext.username)}
+  ${kcSanitize(msg("identityProviderLinkBodyHtmlAfter", linkExpiration, identityProviderAlias, identityProviderContext.username))?no_esc}
 <#elseif section = "link">
   <#if link??>${link}</#if>
 </#if>
