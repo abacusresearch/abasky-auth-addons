@@ -7,7 +7,7 @@
 
     <form action="${url.accountUrl}" class="form-horizontal" method="post">
 
-        <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker?html}">
+        <input type="hidden" id="stateChecker" name="stateChecker" value="${stateChecker}">
 
         <#if !realm.registrationEmailAsUsername>
             <div class="form-group ${messagesPerField.printIfExists('username','has-error')}">
@@ -16,18 +16,18 @@
                 </div>
 
                 <div class="col-sm-10 col-md-10">
-                    <input type="text" class="form-control" id="username" name="username" <#if !realm.editUsernameAllowed>disabled</#if> value="${(account.username!'')?html}">
+                    <input type="text" class="form-control" id="username" name="username" <#if !realm.editUsernameAllowed>disabled</#if> value="${(account.username!'')}">
                 </div>
             </div>
         </#if>
 
         <div class="form-group ${messagesPerField.printIfExists('email','has-error')}">
             <div class="col-sm-2 col-md-2 text-right">
-            <label for="email" class="control-label">${msg("email")}</label> <span class="required">*</span>
+                <label for="email" class="control-label">${msg("email")}</label> <span class="required">*</span>
             </div>
 
             <div class="col-sm-10 col-md-10">
-                <input type="text" class="form-control" id="email" name="email" autofocus value="${(account.email!'')?html}">
+                <input type="text" class="form-control" id="email" name="email" autofocus value="${(account.email!'')}">
             </div>
         </div>
 
@@ -37,7 +37,7 @@
             </div>
 
             <div class="col-sm-10 col-md-10">
-                <input type="text" class="form-control" id="firstName" name="firstName" value="${(account.firstName!'')?html}">
+                <input type="text" class="form-control" id="firstName" name="firstName" value="${(account.firstName!'')}">
             </div>
         </div>
 
@@ -47,7 +47,7 @@
             </div>
 
             <div class="col-sm-10 col-md-10">
-                <input type="text" class="form-control" id="lastName" name="lastName" value="${(account.lastName!'')?html}">
+                <input type="text" class="form-control" id="lastName" name="lastName" value="${(account.lastName!'')}">
             </div>
         </div>
 
@@ -55,6 +55,7 @@
             <div class="col-sm-offset-2 col-md-5 m-b-md"><span class="required">*</span> ${msg("requiredFields")}</div>
             <div id="kc-form-buttons" class="col-md-5 submit">
                 <div class="text-right">
+                    <#if url.referrerURI??><a class="text-underline" href="${url.referrerURI}">${kcSanitize(msg("backToApplication")?no_esc)}</a></#if>
                     <button type="submit" class="btn btn-primary pull-right m-l-sm" name="submitAction" value="Save">${msg("doSave")}</button>
                     <button type="submit" class="btn btn-default" name="submitAction" value="Cancel">${msg("doCancel")}</button>
                 </div>

@@ -1,11 +1,11 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout; section>
 <#if section = "title"  >
-  ${msg("executeActionsSubject")}
+  ${kcSanitize(msg("executeActionsSubject"))?no_esc}
 <#elseif section = "content">
-  ${msg("executeActionsBodyHtml", realmName)}
+  ${kcSanitize(msg("executeActionsBodyHtml", realmName))?no_esc}
 <#elseif section = "contentAfter">
-  ${msg("executeActionsBodyHtmlAfter", linkExpiration)}
+  ${kcSanitize(msg("executeActionsBodyHtmlAfter", linkExpiration))?no_esc}
 <#elseif section = "link">
   <#if link??>${link}</#if>
 </#if>

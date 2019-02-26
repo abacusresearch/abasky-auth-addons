@@ -1,10 +1,8 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout; section>
 <#if section = "title">
-  ${msg("eventLoginErrorSubject")}
+  ${kcSanitize(msg("eventLoginErrorSubject"))?no_esc}
 <#elseif section = "content">
-  ${msg("eventLoginErrorBodyHtml",event.date,event.ipAddress)}
-<#elseif section = "link">
-  <#if link??>${link}</#if>
+  ${kcSanitize(msg("eventLoginErrorBodyHtml",event.date,event.ipAddress))?no_esc}
 </#if>
 </@layout.registrationLayout>
