@@ -8,5 +8,5 @@ Create a release on github. This automatically tags the image and starts a build
 Use the following convention for tag names: `v20190315-c61dec2`
 
 ```
-echo `date +%Y%m%d`-`git describe --match=NeVeRmAtCh --always --dirty`
+echo v`date +%Y%m%d`-`git describe --match=NeVeRmAtCh --always --dirty`
 ```
