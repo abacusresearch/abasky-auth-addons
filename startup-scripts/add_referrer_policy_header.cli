@@ -1,0 +1,2 @@
+/subsystem=undertow/configuration=filter/response-header=referrer-policy:add(header-name=Referrer-Policy,header-value=strict-origin-when-cross-origin)
+/subsystem=undertow/server=default-server/host=default-host/filter-ref=referrer-policy:add
