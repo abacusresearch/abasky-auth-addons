@@ -110,6 +110,11 @@ body {
     background-size: 16px;
 }
 
+#kc-social-providers #zocial-apple {
+    background-image: url("../img/icon-apple.png");
+    background-size: 34px;
+    background-position: 0px center;
+}
 /* Registration link */
 
 #kc-registration {
