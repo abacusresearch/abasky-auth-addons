@@ -31,7 +31,8 @@
         </#if>
     </head>
 
-    <body>
+    <body class="${client.clientId}">
+    <div id="kc-header"></div>
     <div id="kc-container">
         <div id="kc-container-wrapper"
                 <#if displayInfo>
